@@ -27,3 +27,22 @@ function burgerMenu() {
 burgerMenu()
 
 
+const elemsAnim = document.querySelectorAll('.dashboard__item');
+const laptopScreen = window.matchMedia('(max-width: 1150px');
+
+if (!laptopScreen.matches === true) {
+    
+    elemsAnim.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('show');
+        }, index * 600)
+    });
+} else {
+    const elemRight = document.querySelector('.right__item');
+    const elemLeft = document.querySelector('.left__item');
+    elemRight.classList.add('mobile');
+    elemLeft.style.opacity = 1;
+}
+
+
+

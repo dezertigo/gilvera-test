@@ -194,6 +194,31 @@ body.dark {
   color: #757575;
 }
 
+.dashboard__item {
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+      -ms-transform: translateY(60px);
+          transform: translateY(60px);
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.dashboard__item.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.dashboard__item.mobile {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .left__item {
   background-color: #fff;
   display: -webkit-box;
@@ -344,6 +369,10 @@ body.dark {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.tabs__search input {
+  width: 100%;
 }
 
 .tabs__input {
@@ -651,6 +680,10 @@ body.dark {
 
   .tabs__content {
     margin: 50px auto 0;
+    max-width: 100%;
+  }
+
+  .tabs__head {
     max-width: 100%;
   }
 }
